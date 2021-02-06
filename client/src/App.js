@@ -1,7 +1,11 @@
+import React from "react";
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
     <div className="App">
-      <h1>Kevin Ly</h1>
+      <Navbar />
+      <h1 className="name">Kevin Ly</h1>
       <a
         href="https://flow-employee-database.herokuapp.com/"
         target="_blank"

@@ -1,0 +1,22 @@
+.navbar {
+  height: 10vh;
+}
+
+.navbar-container {
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.name {
+  text-align: center;
+  font-size: 80px;
+}
