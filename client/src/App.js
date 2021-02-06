@@ -1,11 +1,26 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui//styles";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#424242",
+    },
+    secondary: {
+      main: "#f57c00",
+    },
+  },
+});
+
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <h1 className="name">Kevin Ly</h1>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Navbar />
+        {/* <h1 className="name">Kevin Ly</h1>
       <a
         href="https://flow-employee-database.herokuapp.com/"
         target="_blank"
@@ -28,8 +43,9 @@ function App() {
         rel="noreferrer"
       >
         Noted
-      </a>
-    </div>
+      </a> */}
+      </div>
+    </ThemeProvider>
   );
 }
 
