@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import Intro from "./components/Intro";
 
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui//styles";
@@ -20,6 +21,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <Navbar />
+        <Intro />
         {/* <h1 className="name">Kevin Ly</h1>
       <a
         href="https://flow-employee-database.herokuapp.com/"
