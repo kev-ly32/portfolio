@@ -1,41 +1,57 @@
 import React from "react";
-import { Button, Grid, Typography } from "@material-ui/core";
+import { IconButton, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import background from "../public/Background.jpg";
+
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
+  secitonContainer: {
+    height: "75%",
+    backgroundImage: `url(${background})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "none",
+  },
   container: {
-    height: "40%",
-    width: "70%",
+    height: "100%",
+    width: "90%",
     margin: "0 auto",
-    // textAlign: "center",
-    alignItems: "center",
+    alignItems: "flex-end",
+    justifyContent: "center",
+    textAlign: "center",
+  },
+  layer: {
+    backgroundColor: "rgba(0,0,0,0.5)",
+    height: "100%",
+  },
+  color: {
+    color: "white",
+  },
+  button: {
+    margin: "17% 0 10% 0",
   },
 }));
 
 function Intro(props) {
   const classes = useStyles();
   return (
-    <Grid container className={classes.container}>
-      <Grid item sm={12} md={6}>
-        <Typography variant="h3">IMAGE</Typography>
-      </Grid>
-      <Grid item sm={12} md={6}>
-        <Typography variant="subtitle1" component="h6">
-          Web Developer
-        </Typography>
-        <Typography color="secondary" variant="h2">
-          Kevin Ly
-        </Typography>
-        <Typography variant="body1">
-          I'm a web developer specializing in the MERN stack
-          <br />
-          Looking for full stack positions
-        </Typography>
-        <Button color="primary" variant="outlined">
-          Contact
-        </Button>
-      </Grid>
-    </Grid>
+    <div className={classes.secitonContainer}>
+      <div className={classes.layer}>
+        <Grid container className={classes.container}>
+          <Grid item sm={12} md={6}>
+            <Typography gutterBottom className={classes.color} variant="h1">
+              Hi, I'm <span style={{ color: "#f57c00" }}>Kevin</span>
+            </Typography>
+            <Typography variant="body1" className={classes.color}>
+              Full stack web developer
+            </Typography>
+            <IconButton className={classes.button}>
+              <ExpandMoreIcon fontSize="large" color="secondary" />
+            </IconButton>
+          </Grid>
+        </Grid>
+      </div>
+    </div>
   );
 }
 

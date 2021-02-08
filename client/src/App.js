@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
+import About from "./components/About";
 
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui//styles";
@@ -19,33 +20,10 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
+      <div className="App" style={{ backgroundColor: "#F5F5F5" }}>
         <Navbar />
         <Intro />
-        {/* <h1 className="name">Kevin Ly</h1>
-      <a
-        href="https://flow-employee-database.herokuapp.com/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Employee Database
-      </a>
-      <br />
-      <a
-        href="https://aptitudebank.herokuapp.com/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Apitude Bank
-      </a>
-      <br />
-      <a
-        href="https://have-it-noted.herokuapp.com/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Noted
-      </a> */}
+        <About />
       </div>
     </ThemeProvider>
   );
