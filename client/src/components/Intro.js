@@ -6,7 +6,7 @@ import background from "../public/Background.jpg";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
-  secitonContainer: {
+  sectionContainer: {
     height: "75%",
     backgroundImage: `url(${background})`,
     backgroundSize: "cover",
@@ -29,13 +29,14 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     margin: "17% 0 10% 0",
+    color: "white",
   },
 }));
 
 function Intro(props) {
   const classes = useStyles();
   return (
-    <div className={classes.secitonContainer}>
+    <div className={classes.sectionContainer}>
       <div className={classes.layer}>
         <Grid container className={classes.container}>
           <Grid item sm={12} md={6}>
