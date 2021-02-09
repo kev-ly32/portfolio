@@ -20,7 +20,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App" style={{ backgroundColor: "#F5F5F5" }}>
+      <div className="App">
         <Navbar />
         <Intro />
         <About />
