@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import About from "./components/About";
+import Projects from "./components/Projects";
 
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui//styles";
@@ -24,6 +25,7 @@ function App() {
         <Navbar />
         <Intro />
         <About />
+        <Projects />
       </div>
     </ThemeProvider>
   );

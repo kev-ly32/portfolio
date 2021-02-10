@@ -10,11 +10,3 @@ body,
 .App {
   height: 100%;
 }
-
-.App {
-  background-image: url("./public/Background.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
