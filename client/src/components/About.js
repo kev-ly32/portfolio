@@ -12,6 +12,7 @@ const logos = [
   "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mui_f1zwfn.png",
   "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
   "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/postgresql_truxlj.png",
+  "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -40,10 +41,19 @@ function About(props) {
         </Grid>
         <Grid item md={8} className={classes.aboutBody}>
           <h2 style={{ marginBottom: "3%" }}>About Me</h2>
-          <p>Full stack web developer specializing in React development</p>
-          <p>Full stack web developer specializing in React development</p>
           <p style={{ marginBottom: "3%" }}>
-            Full stack web developer specializing in React development
+            Nice to meet you! My name's Kevin and I'm a web developer <br />
+            with a passion for{" "}
+            <span style={{ color: "#f57c00" }}>full stack development</span>. My
+            goal is to provide
+            <br /> a meaningful impact to the projects I work on to create
+            <span style={{ color: "#f57c00" }}> beautiful</span> <br /> and
+            <span style={{ color: "#f57c00" }}> functional</span> web
+            applications.
+          </p>
+          <p style={{ marginBottom: "3%" }}>
+            To do that, I have developed a skillset with the following
+            technologies:
           </p>
           {logos.map((logo, i) => (
             <img key={i} src={logo} alt="logo" />
