@@ -20,10 +20,8 @@ function Navbar(props) {
         </Typography>
         <Grid container justify="flex-end" spacing={3}>
           {navLinks.map((link, i) => (
-            <Grid item>
-              <Button key={i} color="inherit">
-                {link}
-              </Button>
+            <Grid key={i} item>
+              <Button color="inherit">{link}</Button>
             </Grid>
           ))}
         </Grid>

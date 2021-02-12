@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Typography, Card, CardMedia } from "@material-ui/core";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import { makeStyles } from "@material-ui/core/styles";
@@ -49,33 +49,52 @@ const useStyles = makeStyles({
     },
     "&:hover .layerContent": { display: "flex" },
   },
-  layerContent: {
-    opacity: "0",
-    "&:hover": {
-      opacity: "1",
-    },
-  },
 });
 
 function Projects(props) {
   const classes = useStyles();
+  const [project, setProject] = useState("");
+
+  const handleClick = (e) => {
+    let projectId = e.currentTarget.id;
+    setProject(projects[projectId]);
+  };
   return (
     <Grid justify="center" container className={classes.container}>
       <Grid item xs={12} className={classes.header}>
         <Typography variant="h4">Projects!</Typography>
       </Grid>
       <Grid spacing={4} container className={classes.projectsContainer}>
-        {projects.map((project) => (
-          <Grid item xs={12} sm={6} md={4} style={{ height: "350px" }}>
+        {projects.map((project, i) => (
+          <Grid key={i} item xs={12} sm={6} md={4} style={{ height: "350px" }}>
             <Card square>
               <CardMedia className={classes.project} image={project} />
             </Card>
-            <Grid container direction="column" className={classes.layer}>
-              <VisibilityIcon className="layerContent " />
-              <Typography className="layerContent">View Project</Typography>
+            <Grid
+              container
+              direction="column"
+              className={classes.layer}
+              onClick={handleClick}
+              id={i}
+            >
+              <VisibilityIcon
+                className="layerContent"
+                style={{ fontSize: "30px" }}
+              />
+              <Typography
+                name="2"
+                className="layerContent"
+                style={{ fontSize: "20px" }}
+              >
+                Project Details
+              </Typography>
             </Grid>
           </Grid>
         ))}
+      </Grid>
+      <Grid container>
+        <h1>Project details</h1>
+        <img src={project} alt={project} />
       </Grid>
     </Grid>
   );
