@@ -11,3 +11,7 @@ body,
   height: 100%;
   overflow: auto;
 }
+
+.App {
+  background: "#F5F5F5";
+}
