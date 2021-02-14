@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Grid, Typography, Card, CardMedia } from "@material-ui/core";
+import {
+  Button,
+  Grid,
+  Typography,
+  Card,
+  CardMedia,
+  Fade,
+} from "@material-ui/core";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -18,6 +25,8 @@ const projects = [
       "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
       "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
     ],
+    github: "https://github.com/kev-ly32/Flow-Database.git",
+    site: "https://flow-employee-database.herokuapp.com/",
   },
   {
     name: "Aptitude Bank",
@@ -34,6 +43,8 @@ const projects = [
       "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
       "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
     ],
+    github: "https://github.com/kev-ly32/aptitude-bank.git",
+    site: "https://aptitudebank.herokuapp.com/",
   },
   {
     name: "Noted",
@@ -50,6 +61,8 @@ const projects = [
       "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/postgresql_truxlj.png",
       "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
     ],
+    github: "https://github.com/kev-ly32/noted.git",
+    site: "https://have-it-noted.herokuapp.com/",
   },
 ];
 
@@ -122,12 +135,8 @@ function Projects(props) {
                 className="layerContent"
                 style={{ fontSize: "30px" }}
               />
-              <Typography
-                name="2"
-                className="layerContent"
-                style={{ fontSize: "20px" }}
-              >
-                Project Details
+              <Typography className="layerContent" style={{ fontSize: "20px" }}>
+                {project.name}
               </Typography>
             </Grid>
           </Grid>
@@ -158,17 +167,40 @@ function Projects(props) {
                 <Typography color="secondary" variant="h6">
                   Description:
                 </Typography>
-                <Typography paragraph variant="p">
-                  {project.description}
-                </Typography>
+                <p> {project.description}</p>
                 <Typography color="secondary" variant="h6">
                   Tech stack:
                 </Typography>
-                <Typography variant="p">
-                  {project.stack.map((logo, i) => (
-                    <img key={i} src={logo} alt={logo} />
-                  ))}
-                </Typography>
+                {project.stack.map((logo, i) => (
+                  <img key={i} src={logo} alt={logo} />
+                ))}
+                <Grid
+                  container
+                  justify="center"
+                  spacing={3}
+                  style={{ marginTop: "5%" }}
+                >
+                  <Grid item>
+                    <a
+                      href={project.site}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Button variant="outlined">View Site</Button>
+                    </a>
+                  </Grid>
+                  <Grid item>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Button variant="outlined">View Code</Button>
+                    </a>
+                  </Grid>
+                </Grid>
               </Grid>
             </>
           ) : null}
