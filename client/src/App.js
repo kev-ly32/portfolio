@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui//styles";
@@ -26,6 +27,7 @@ function App() {
         <Intro />
         <About />
         <Projects />
+        <Contact />
       </div>
     </ThemeProvider>
   );

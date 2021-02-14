@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Grid,
-  Typography,
-  Card,
-  CardMedia,
-  Fade,
-} from "@material-ui/core";
+import { Button, Grid, Typography, Card, CardMedia } from "@material-ui/core";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import { makeStyles } from "@material-ui/core/styles";
 
