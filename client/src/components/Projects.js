@@ -98,7 +98,7 @@ const useStyles = makeStyles({
   },
 });
 
-function Projects(props) {
+function Projects({ projectsRef }) {
   const classes = useStyles();
   const [project, setProject] = useState("");
 
@@ -107,13 +107,28 @@ function Projects(props) {
     setProject(projects[projectId]);
   };
   return (
-    <Grid justify="center" container className={classes.container}>
-      <Grid item xs={12} className={classes.header}>
-        <Typography variant="h4">Projects!</Typography>
+    <Grid
+      innerRef={projectsRef}
+      justify="center"
+      container
+      className={classes.container}
+    >
+      <Grid item xs={12} className={`${classes.header} fade-in`}>
+        <Typography gutterBottom variant="h4">
+          Projects!
+        </Typography>
       </Grid>
       <Grid spacing={4} container className={classes.projectsContainer}>
         {projects.map((project, i) => (
-          <Grid key={i} item xs={12} sm={6} md={4} style={{ height: "350px" }}>
+          <Grid
+            key={i}
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            className="fade-in"
+            style={{ height: "350px" }}
+          >
             <Card square>
               <CardMedia className={classes.project} image={project.img} />
             </Card>
@@ -136,7 +151,7 @@ function Projects(props) {
         ))}
       </Grid>
       <Grid container justify="center">
-        <Grid container style={{ width: "90%" }}>
+        <Grid container style={{ width: "90%" }} className="fade-in">
           {project !== "" ? (
             <>
               <Grid item xs={12}>

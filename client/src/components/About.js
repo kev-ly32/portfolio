@@ -1,6 +1,8 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { IconButton, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const logos = [
   "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
@@ -17,12 +19,12 @@ const logos = [
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: "70%",
+    height: "90%",
     alignItems: "center",
     backgroundColor: "#F5F5F5",
   },
   aboutContainer: {
-    height: "70%",
+    height: "60%",
     width: "60%",
     border: "2px solid black",
   },
@@ -31,11 +33,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function About(props) {
+function About({ aboutRef, scroll }) {
   const classes = useStyles();
+
   return (
-    <Grid container justify="center" className={classes.container}>
-      <Grid container alignItems="center" className={classes.aboutContainer}>
+    <Grid
+      innerRef={aboutRef}
+      container
+      direction="column"
+      justify="center"
+      className={classes.container}
+    >
+      <Grid
+        container
+        alignItems="center"
+        className={`${classes.aboutContainer} fade-in`}
+      >
         <Grid item md={4} className={classes.aboutBody}>
           <h1>Picture</h1>
         </Grid>
@@ -60,6 +73,13 @@ function About(props) {
           ))}
         </Grid>
       </Grid>
+      <IconButton
+        className={`${classes.button} fade-in`}
+        onClick={scroll}
+        style={{ top: "10%" }}
+      >
+        <ExpandMoreIcon fontSize="large" color="secondary" />
+      </IconButton>
     </Grid>
   );
 }

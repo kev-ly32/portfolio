@@ -15,3 +15,21 @@ body,
 .App {
   background: "#F5F5F5";
 }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+}
+
+.fade-in2 {
+  opacity: 0;
+  transition: opacity 600ms ease-in;
+  transition-delay: 1000ms;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+.fade-in2.appear {
+  opacity: 1;
+}

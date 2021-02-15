@@ -34,20 +34,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Intro(props) {
+function Intro({ scroll }) {
   const classes = useStyles();
   return (
     <div className={classes.sectionContainer}>
       <div className={classes.layer}>
         <Grid container className={classes.container}>
           <Grid item sm={12} md={6}>
-            <Typography gutterBottom className={classes.color} variant="h1">
+            <Typography
+              gutterBottom
+              className={`${classes.color} fade-in`}
+              variant="h1"
+            >
               Hi, I'm <span style={{ color: "#f57c00" }}>Kevin</span>
             </Typography>
-            <Typography variant="body1" className={classes.color}>
+            <Typography variant="body1" className={`${classes.color} fade-in2`}>
               Full stack web developer
             </Typography>
-            <IconButton className={classes.button}>
+            <IconButton className={classes.button} onClick={scroll}>
               <ExpandMoreIcon fontSize="large" color="secondary" />
             </IconButton>
           </Grid>
