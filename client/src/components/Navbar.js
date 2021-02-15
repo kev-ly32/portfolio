@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Navbar(props) {
+function Navbar({ aboutScroll, projectsScroll }) {
   const navLinks = ["Projects", "About", "Resume", "Contact"];
   const classes = useStyles();
   return (
@@ -20,7 +20,11 @@ function Navbar(props) {
         </Typography>
         <Grid container justify="flex-end" spacing={3}>
           {navLinks.map((link, i) => (
-            <Grid key={i} item>
+            <Grid
+              key={i}
+              item
+              onClick={link === "Projects" ? projectsScroll : aboutScroll}
+            >
               <Button color="inherit">{link}</Button>
             </Grid>
           ))}

@@ -58,7 +58,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Navbar />
+        <Navbar aboutScroll={scrollToAbout} projectsScroll={scrollToProjects} />
         <Intro scroll={scrollToAbout} />
         <About aboutRef={aboutRef} scroll={scrollToProjects} />
         <Projects projectsRef={projectsRef} />
