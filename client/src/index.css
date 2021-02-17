@@ -27,9 +27,17 @@ body,
   transition-delay: 1000ms;
 }
 
+.project-fade-in {
+  opacity: 0;
+  transition: opacity 290ms ease-in;
+}
+
 .fade-in.appear {
   opacity: 1;
 }
 .fade-in2.appear {
+  opacity: 1;
+}
+.project-fade-in.appear {
   opacity: 1;
 }

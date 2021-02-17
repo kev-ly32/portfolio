@@ -7,7 +7,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   sectionContainer: {
-    height: "75%",
+    height: "80%",
     backgroundImage: `url(${background})`,
     backgroundSize: "cover",
     backgroundAttachment: "fixed",

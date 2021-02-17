@@ -101,11 +101,22 @@ const useStyles = makeStyles({
 function Projects({ projectsRef }) {
   const classes = useStyles();
   const [project, setProject] = useState("");
+  const [showProject, setShowProject] = useState(false);
 
   const handleClick = (e) => {
     let projectId = e.currentTarget.id;
-    setProject(projects[projectId]);
+    setShowProject(false);
+    if (project === "") {
+      setShowProject(true);
+      setProject(projects[projectId]);
+    } else {
+      setTimeout(() => {
+        setShowProject(true);
+        setProject(projects[projectId]);
+      }, 290);
+    }
   };
+  console.log(showProject);
   return (
     <Grid
       innerRef={projectsRef}
@@ -151,7 +162,11 @@ function Projects({ projectsRef }) {
         ))}
       </Grid>
       <Grid container justify="center">
-        <Grid container style={{ width: "90%" }} className="fade-in">
+        <Grid
+          container
+          style={{ width: "90%" }}
+          className={showProject ? "project-fade-in appear" : "project-fade-in"}
+        >
           {project !== "" ? (
             <>
               <Grid item xs={12}>
