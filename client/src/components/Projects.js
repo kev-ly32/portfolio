@@ -11,12 +11,36 @@ const projects = [
     description:
       "Employee database application that allows users to update an individual database to manage employee data for a particular company.",
     stack: [
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
+        name: "HTML5",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
+        name: "CSS3",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
+        name: "Javascript",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
+        name: "React",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
+        name: "MongoDB",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
+        name: "Node.js",
+      },
     ],
     github: "https://github.com/kev-ly32/Flow-Database.git",
     site: "https://flow-employee-database.herokuapp.com/",
@@ -28,13 +52,41 @@ const projects = [
     description:
       "Banking app featuring full user authentication and real time balance updates. Aptitude Bank also features the ability to send and receive money to other users and updates account transaction history for all balance updates.",
     stack: [
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/redux_r4cguj.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
+        name: "HTML5",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
+        name: "CSS3",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
+        name: "Javascript",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
+        name: "React",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/redux_r4cguj.png",
+        name: "Redux",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
+        name: "MongoDB",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
+        name: "Node.js",
+      },
     ],
     github: "https://github.com/kev-ly32/aptitude-bank.git",
     site: "https://aptitudebank.herokuapp.com/",
@@ -46,13 +98,41 @@ const projects = [
     description:
       "Personalized note taking app with full user authentication. App features the ability to not only add, update, and remove notes, but also allows users to move each note within the dashboard whereever they please, organizing them in a way that suits their needs. Note position is updated in real time and saves to a Postgresql database.",
     stack: [
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mui_f1zwfn.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/postgresql_truxlj.png",
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
+        name: "HTML5",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
+        name: "CSS3",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
+        name: "Javascript",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
+        name: "React",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mui_f1zwfn.png",
+        name: "Material-UI",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/postgresql_truxlj.png",
+        name: "PostgreSQL",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
+        name: "Node.js",
+      },
     ],
     github: "https://github.com/kev-ly32/noted.git",
     site: "https://have-it-noted.herokuapp.com/",
@@ -95,6 +175,20 @@ const useStyles = makeStyles({
   },
   description: {
     paddingLeft: "5%",
+  },
+  logo: {
+    background: "none",
+    transition: "background 50ms ease-in",
+    "&:hover": {
+      background: "rgb(245, 124, 0, 0.09)",
+      borderRadius: "13px",
+    },
+    "&+ .logoName": {
+      display: "none",
+    },
+    "&:hover + .logoName": {
+      display: "block",
+    },
   },
 });
 
@@ -194,9 +288,20 @@ function Projects({ projectsRef }) {
                 <Typography color="secondary" variant="h6">
                   Tech stack:
                 </Typography>
-                {project.stack.map((logo, i) => (
-                  <img key={i} src={logo} alt={logo} />
-                ))}
+                <Grid container>
+                  {project.stack.map((logo, i) => (
+                    <div key={i} style={{ maxWidth: "50px", height: "70px" }}>
+                      <img
+                        className={classes.logo}
+                        src={logo.link}
+                        alt="logo"
+                      />
+                      <p className="logoName" style={{ fontSize: "12px" }}>
+                        {logo.name}
+                      </p>
+                    </div>
+                  ))}
+                </Grid>
                 <Grid
                   container
                   justify="center"

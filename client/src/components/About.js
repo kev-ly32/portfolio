@@ -1,20 +1,60 @@
 import React from "react";
-import { IconButton, Grid } from "@material-ui/core";
+import { Button, IconButton, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const logos = [
-  "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
-  "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
-  "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
-  "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
-  "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/redux_r4cguj.png",
-  "https://res.cloudinary.com/de5gzocha/image/upload/v1612841260/Portfolio/bootstrap_mkoxvy.png",
-  "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mui_f1zwfn.png",
-  "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
-  "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/postgresql_truxlj.png",
-  "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
+  {
+    link:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
+    name: "HTML5",
+  },
+  {
+    link:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
+    name: "CSS3",
+  },
+  {
+    link:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
+    name: "Javascript",
+  },
+  {
+    link:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
+    name: "React",
+  },
+  {
+    link:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/redux_r4cguj.png",
+    name: "Redux",
+  },
+  {
+    link:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841260/Portfolio/bootstrap_mkoxvy.png",
+    name: "Bootstrap",
+  },
+  {
+    link:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mui_f1zwfn.png",
+    name: "Material-UI",
+  },
+  {
+    link:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
+    name: "MongoDB",
+  },
+  {
+    link:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/postgresql_truxlj.png",
+    name: "PostgreSQL",
+  },
+  {
+    link:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
+    name: "Node.js",
+  },
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -30,6 +70,20 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutBody: {
     textAlign: "center",
+  },
+  logo: {
+    background: "none",
+    transition: "background 50ms ease-in",
+    "&:hover": {
+      background: "rgb(245, 124, 0, 0.09)",
+      borderRadius: "13px",
+    },
+    "&+ .logoName": {
+      display: "none",
+    },
+    "&:hover + .logoName": {
+      display: "block",
+    },
   },
 }));
 
@@ -68,9 +122,20 @@ function About({ aboutRef, scroll }) {
             To do that, I have developed a skillset with the following
             technologies:
           </p>
-          {logos.map((logo, i) => (
-            <img key={i} src={logo} alt="logo" />
-          ))}
+          <Grid container justify="center">
+            {logos.map((logo, i) => (
+              <div key={i} style={{ maxWidth: "50px", height: "70px" }}>
+                <img className={classes.logo} src={logo.link} alt="logo" />
+                <p className="logoName" style={{ fontSize: "13px" }}>
+                  {logo.name}
+                </p>
+              </div>
+            ))}
+          </Grid>
+          {/* <br />
+          <Button variant="outlined" style={{ marginTop: "5%" }}>
+            See My Resume
+          </Button> */}
         </Grid>
       </Grid>
       <IconButton
