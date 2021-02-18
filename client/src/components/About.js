@@ -66,10 +66,15 @@ const useStyles = makeStyles((theme) => ({
   aboutContainer: {
     height: "60%",
     width: "60%",
-    border: "2px solid black",
+    border: "2px dotted black",
   },
   aboutBody: {
     textAlign: "center",
+  },
+  aboutImage: {
+    height: "40%",
+    display: "flex",
+    justifyContent: "center",
   },
   logo: {
     background: "none",
@@ -100,11 +105,16 @@ function About({ aboutRef, scroll }) {
     >
       <Grid
         container
+        justify="center"
         alignItems="center"
         className={`${classes.aboutContainer} fade-in`}
       >
-        <Grid item md={4} className={classes.aboutBody}>
-          <h1>Picture</h1>
+        <Grid item md={4} className={classes.aboutImage}>
+          <img
+            src="https://res.cloudinary.com/de5gzocha/image/upload/v1613622911/Portfolio/KevinLy_glphuk.jpg"
+            alt="Kevin Ly"
+            style={{ height: "100%", borderRadius: "150px" }}
+          />
         </Grid>
         <Grid item md={8} className={classes.aboutBody}>
           <h2 style={{ marginBottom: "3%" }}>About Me</h2>
