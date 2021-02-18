@@ -1,6 +1,16 @@
 import React, { useState } from "react";
-import { Button, Grid, TextField, Typography } from "@material-ui/core";
+import {
+  IconButton,
+  Button,
+  Grid,
+  Link,
+  TextField,
+  Typography,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 import background from "../public/Background.jpg";
 
@@ -16,12 +26,12 @@ const useStyles = makeStyles({
     backgroundColor: "rgba(0,0,0,0.5)",
     height: "100%",
   },
-  form: {
-    minWidth: "25%",
-    background: "rgba(120,120,120,0.8)",
-    padding: "2em",
-  },
-  input: {
+  // form: {
+  //   minWidth: "25%",
+  //   background: "rgba(120,120,120,0.2)",
+  //   padding: "2em",
+  // },
+  contactText: {
     color: "white",
   },
 });
@@ -49,40 +59,38 @@ function Contact(props) {
         className={classes.layer}
       >
         <Grid item className={classes.form}>
-          <Typography color="secondary" variant="h3">
+          <Typography align="center" variant="h3" color="secondary">
             Contact Me
           </Typography>
-          <form
-            action="mailto:kev_ly32@hotmail.com"
-            method="post"
-            encType="text/plain"
-          >
-            <TextField
-              fullWidth
-              margin="normal"
-              color="secondary"
-              label="Your Email"
-              name="email"
-              value={contact.email}
-              onChange={handleChange}
-              InputProps={{ className: classes.input }}
-            />
-            <TextField
-              fullWidth
-              margin="normal"
-              multiline
-              rows={20}
-              color="secondary"
-              label="Message"
-              name="message"
-              value={contact.message}
-              onChange={handleChange}
-              InputProps={{ className: classes.input }}
-            />
-            <Button type="submit" color="secondary">
-              Submit
-            </Button>
-          </form>
+          <Grid container justify="center">
+            <Grid item>
+              <IconButton href="mailto:kev_ly32@hotmail.com">
+                <MailOutlineIcon fontSize="large" style={{ color: "white" }} />
+              </IconButton>
+            </Grid>
+            <Grid item>
+              <IconButton
+                href="https://www.linkedin.com/in/kevin-ly-b7720b13a/"
+                target="_blank"
+              >
+                <LinkedInIcon fontSize="large" style={{ color: "white" }} />
+              </IconButton>
+            </Grid>
+            <Grid item>
+              <IconButton href="https://github.com/kev-ly32" target="_blank">
+                <GitHubIcon fontSize="large" style={{ color: "white" }} />
+              </IconButton>
+            </Grid>
+            <Grid container justify="center">
+              <Button
+                variant="contained"
+                fontSize="large"
+                // style={{ color: "white" }}
+              >
+                Resume
+              </Button>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
