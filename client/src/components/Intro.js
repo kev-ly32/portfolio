@@ -17,9 +17,15 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "90%",
     margin: "0 auto",
-    alignItems: "flex-end",
+    alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
+  },
+  containerText: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    paddingTop: "150px",
   },
   layer: {
     backgroundColor: "rgba(0,0,0,0.5)",
@@ -39,8 +45,8 @@ function Intro({ scroll }) {
   return (
     <div className={classes.sectionContainer}>
       <div className={classes.layer}>
-        <Grid container className={classes.container}>
-          <Grid item sm={12} md={6}>
+        <Grid container direction="column" className={classes.container}>
+          <Grid item xs={9} className={classes.containerText}>
             <Typography
               gutterBottom
               className={`${classes.color} fade-in`}
@@ -51,6 +57,8 @@ function Intro({ scroll }) {
             <Typography variant="body1" className={`${classes.color} fade-in2`}>
               Full stack web developer
             </Typography>
+          </Grid>
+          <Grid item xs={3}>
             <IconButton className={classes.button} onClick={scroll}>
               <ExpandMoreIcon fontSize="large" color="secondary" />
             </IconButton>
