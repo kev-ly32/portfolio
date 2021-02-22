@@ -6,6 +6,11 @@ import background from "../public/Background.jpg";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    "&:hover": {
+      background: "rgb(245,124,0, 0.03)",
+    },
+  },
   sectionContainer: {
     height: "80%",
     backgroundImage: `url(${background})`,
@@ -59,7 +64,10 @@ function Intro({ scroll }) {
             </Typography>
           </Grid>
           <Grid item xs={3}>
-            <IconButton className={classes.button} onClick={scroll}>
+            <IconButton
+              className={`${classes.button} ${classes.root}`}
+              onClick={scroll}
+            >
               <ExpandMoreIcon fontSize="large" color="secondary" />
             </IconButton>
           </Grid>
