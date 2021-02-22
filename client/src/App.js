@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import About from "./components/About";
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
@@ -62,6 +63,7 @@ function App() {
         <Navbar aboutScroll={scrollToAbout} projectsScroll={scrollToProjects} />
         <Intro scroll={scrollToAbout} />
         <About aboutRef={aboutRef} scroll={scrollToProjects} />
+        <Skills />
         <Projects projectsRef={projectsRef} />
         <Contact />
       </div>

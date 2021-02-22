@@ -16,6 +16,10 @@ body,
   background: "#F5F5F5";
 }
 
+.aboutInfo {
+  padding-left: 20px;
+}
+
 .fade-in {
   opacity: 0;
   transition: opacity 400ms ease-in;
