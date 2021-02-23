@@ -1,7 +1,8 @@
 import React from "react";
 import { Button, IconButton, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
@@ -11,14 +12,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#F5F5F5",
   },
   aboutContainer: {
-    height: "50%",
     width: "60%",
   },
 
   aboutImage: {
     height: "200px",
     display: "flex",
-    // justifyContent: "center",
+  },
+  socialMedia: {
+    display: "flex",
+    alignItems: "center",
   },
   logo: {
     background: "none",
@@ -36,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function About({ aboutRef, scroll }) {
+function About({ aboutRef }) {
   const classes = useStyles();
 
   return (
@@ -47,14 +50,11 @@ function About({ aboutRef, scroll }) {
       justify="center"
       className={classes.container}
     >
-      <Grid
-        container
-        // justify="center"
-        // alignItems="center"
-        className={`${classes.aboutContainer} fade-in`}
-      >
+      <Grid container className={`${classes.aboutContainer} fade-in`}>
         <Grid item xs={12}>
-          <Typography variant="h3">About Me</Typography>
+          <Typography style={{ marginBottom: "60px" }} variant="h3">
+            About Me
+          </Typography>
         </Grid>
 
         <Grid item xs={12} lg={4} className={classes.aboutImage}>
@@ -85,26 +85,34 @@ function About({ aboutRef, scroll }) {
                 From: <span className="aboutInfo">Toronto, ON</span>
               </Typography>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Typography variant="body1">
-                Email: <span className="aboutInfo"> kevin.ly153@gmail.com</span>
-              </Typography>
+            <Grid item xs={12} sm={6}>
+              <Button
+                variant="contained"
+                href="https://www.linkedin.com/in/kevin-ly-b7720b13a/"
+                target="_blank"
+                style={{ margin: "0 15px 15px 0" }}
+              >
+                <span style={{ paddingRight: "10px" }}>LinkedIn</span>
+                <LinkedInIcon style={{ fontSize: 20 }} />
+              </Button>
+              <Button
+                variant="contained"
+                href="https://github.com/kev-ly32"
+                target="_blank"
+                style={{ margin: "0 0 15px 0" }}
+              >
+                <span style={{ paddingRight: "10px" }}>GitHub</span>
+                <GitHubIcon style={{ fontSize: 20 }} />
+              </Button>
             </Grid>
             <Grid item xs={12} style={{ marginTop: "5%" }}>
-              <Button color="secondary" variant="outlined">
+              <Button variant="contained" color="secondary">
                 View Projects
               </Button>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
-      {/* <IconButton
-        className={`${classes.button} fade-in`}
-        onClick={scroll}
-        style={{ top: "10%" }}
-      >
-        <ExpandMoreIcon fontSize="large" color="secondary" />
-      </IconButton> */}
     </Grid>
   );
 }
