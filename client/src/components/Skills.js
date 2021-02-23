@@ -122,6 +122,7 @@ function Skills({ skillsRef }) {
           container
           alignItems="center"
           style={{ width: "60%", height: "100%" }}
+          className="fade-in"
         >
           <Typography style={{ color: "white" }} variant="h3">
             Skills

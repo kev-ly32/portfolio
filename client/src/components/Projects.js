@@ -210,7 +210,6 @@ function Projects({ projectsRef }) {
       }, 290);
     }
   };
-  console.log(showProject);
   return (
     <Grid
       innerRef={projectsRef}
