@@ -122,9 +122,12 @@ function Skills({ skillsRef }) {
           container
           alignItems="center"
           style={{ width: "60%", height: "100%" }}
-          className="fade-in"
         >
-          <Typography style={{ color: "white" }} variant="h3">
+          <Typography
+            style={{ color: "white" }}
+            variant="h3"
+            className="fade-in"
+          >
             Skills
           </Typography>
           <Grid container spacing={2}>
@@ -135,7 +138,7 @@ function Skills({ skillsRef }) {
                 xs={12}
                 md={6}
                 lg={4}
-                className={classes.skills}
+                className={`${classes.skills} fade-in`}
               >
                 <Paper square className={classes.paper}>
                   <Grid
