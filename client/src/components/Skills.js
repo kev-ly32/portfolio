@@ -128,7 +128,14 @@ function Skills({ skillsRef }) {
           </Typography>
           <Grid container spacing={2}>
             {skills.map((skill, i) => (
-              <Grid item xs={12} md={6} lg={4} className={classes.skills}>
+              <Grid
+                key={i}
+                item
+                xs={12}
+                md={6}
+                lg={4}
+                className={classes.skills}
+              >
                 <Paper square className={classes.paper}>
                   <Grid
                     container

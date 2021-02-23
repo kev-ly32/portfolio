@@ -92,14 +92,7 @@ function About({ aboutRef, scroll }) {
             </Grid>
             <Grid item xs={12} style={{ marginTop: "5%" }}>
               <Button color="secondary" variant="outlined">
-                View Resume
-              </Button>
-              <Button
-                color="primary"
-                variant="outlined"
-                style={{ marginLeft: "20px" }}
-              >
-                Projects
+                View Projects
               </Button>
             </Grid>
           </Grid>

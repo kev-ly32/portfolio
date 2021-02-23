@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Navbar({ aboutScroll, projectsScroll, skillsScroll, contactScroll }) {
-  const navLinks = ["About", "Skills", "Projects", "Contact", "Resume"];
+  const navLinks = ["About", "Skills", "Projects", "Contact"];
   const classes = useStyles();
   return (
     <AppBar position="sticky">
@@ -30,18 +30,10 @@ function Navbar({ aboutScroll, projectsScroll, skillsScroll, contactScroll }) {
                   ? projectsScroll
                   : link === "Skills"
                   ? skillsScroll
-                  : link === "Contact"
-                  ? contactScroll
-                  : ""
+                  : contactScroll
               }
             >
-              {link !== "Resume" ? (
-                <Button color="inherit">{link}</Button>
-              ) : (
-                <Button variant="outlined" color="inherit">
-                  <span style={{ color: "#f57c00" }}>{link}</span>
-                </Button>
-              )}
+              <Button color="inherit">{link}</Button>
             </Grid>
           ))}
         </Grid>
