@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   paper: {
-    background: "rgba(120,120,120,0.7)",
+    background: "rgba(120,120,120,0.4)",
     height: "100%",
     width: "100%",
     color: "white",
@@ -108,10 +108,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Skills(props) {
+function Skills({ skillsRef }) {
   const classes = useStyles();
   return (
-    <Grid container className={classes.sectionContainer}>
+    <Grid innerRef={skillsRef} container className={classes.sectionContainer}>
       <Grid
         container
         alignItems="center"

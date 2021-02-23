@@ -36,7 +36,7 @@ const useStyles = makeStyles({
   },
 });
 
-function Contact(props) {
+function Contact({ contactRef }) {
   const [contact, setContact] = useState({ email: "", message: "" });
   console.log(contact);
   const classes = useStyles();
@@ -50,7 +50,7 @@ function Contact(props) {
     }));
   };
   return (
-    <Grid container className={classes.container}>
+    <Grid innerRef={contactRef} container className={classes.container}>
       <Grid
         justify="center"
         alignItems="center"
@@ -85,7 +85,7 @@ function Contact(props) {
               <Button
                 variant="contained"
                 fontSize="large"
-                // style={{ color: "white" }}
+                style={{ marginTop: "5%" }}
               >
                 Resume
               </Button>

@@ -6,7 +6,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: "90%",
+    height: "80%",
     alignItems: "center",
     backgroundColor: "#F5F5F5",
   },
@@ -103,19 +103,15 @@ function About({ aboutRef, scroll }) {
               </Button>
             </Grid>
           </Grid>
-          {/* <br />
-          <Button variant="outlined" style={{ marginTop: "5%" }}>
-            See My Resume
-          </Button> */}
         </Grid>
       </Grid>
-      <IconButton
+      {/* <IconButton
         className={`${classes.button} fade-in`}
         onClick={scroll}
         style={{ top: "10%" }}
       >
         <ExpandMoreIcon fontSize="large" color="secondary" />
-      </IconButton>
+      </IconButton> */}
     </Grid>
   );
 }

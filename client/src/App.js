@@ -27,13 +27,21 @@ const theme = createMuiTheme({
 function App() {
   const [faders, setFaders] = useState([]);
   const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
   const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
   const scrollToAbout = () =>
     aboutRef.current.scrollIntoView({ behavior: "smooth" });
 
+  const scrollToSkills = () =>
+    skillsRef.current.scrollIntoView({ behavior: "smooth" });
+
   const scrollToProjects = () =>
     projectsRef.current.scrollIntoView({ behavior: "smooth" });
+
+  const scrollToContact = () =>
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
 
   const appearOptions = {
     threshold: 1,
@@ -60,12 +68,17 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Navbar aboutScroll={scrollToAbout} projectsScroll={scrollToProjects} />
+        <Navbar
+          aboutScroll={scrollToAbout}
+          projectsScroll={scrollToProjects}
+          skillsScroll={scrollToSkills}
+          contactScroll={scrollToContact}
+        />
         <Intro scroll={scrollToAbout} />
-        <About aboutRef={aboutRef} scroll={scrollToProjects} />
-        <Skills />
+        <About aboutRef={aboutRef} scroll={scrollToSkills} />
+        <Skills skillsRef={skillsRef} />
         <Projects projectsRef={projectsRef} />
-        <Contact />
+        <Contact contactRef={contactRef} />
       </div>
     </ThemeProvider>
   );
