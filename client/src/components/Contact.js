@@ -50,9 +50,15 @@ function Contact({ contactRef }) {
 
   const submitForm = (ev) => {
     ev.preventDefault();
+    const { name, email, message } = contact;
     const form = ev.target;
     const data = new FormData(form);
     const xhr = new XMLHttpRequest();
+
+    if (name === "" || email === "" || message === "") {
+      setStatus("ERROR");
+      return;
+    }
     xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
@@ -60,8 +66,9 @@ function Contact({ contactRef }) {
       if (xhr.status === 200) {
         form.reset();
         setStatus("SUCCESS");
+        setContact({ name: "", email: "", message: "" });
       } else {
-        setStatus("ERROR");
+        setStatus("EMAILERROR");
       }
     };
     xhr.send(data);
@@ -132,25 +139,28 @@ function Contact({ contactRef }) {
                 justify="flex-end"
                 style={{ margin: "10px 0 0 10px" }}
               >
-                {status === "ERROR" && (
+                {status === "ERROR" ? (
                   <Typography variant="h5" style={{ color: "white" }}>
-                    Please enter a valid email.
+                    Please fill out all fields.
                   </Typography>
-                )}
-                {status === "SUCCESS" ? (
-                  <Typography variant="h5" style={{ color: "#f57c00" }}>
+                ) : status === "SUCCESS" ? (
+                  <Typography variant="h5" style={{ color: "white" }}>
                     Thanks! I'll be in contact soon.
                   </Typography>
-                ) : (
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="secondary"
-                    style={{ marginLeft: "20px" }}
-                  >
-                    Submit
-                  </Button>
-                )}
+                ) : status === "EMAILERROR" ? (
+                  <Typography variant="h5" style={{ color: "white" }}>
+                    Invalid Email.
+                  </Typography>
+                ) : null}
+
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="secondary"
+                  style={{ marginLeft: "20px" }}
+                >
+                  Submit
+                </Button>
               </Grid>
             </form>
           </Grid>
