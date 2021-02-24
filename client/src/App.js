@@ -44,8 +44,8 @@ function App() {
     contactRef.current.scrollIntoView({ behavior: "smooth" });
 
   const appearOptions = {
-    threshold: 1,
-    rootMargin: "0px 0px -100px 0px",
+    threshold: 0,
+    rootMargin: "0px 0px -400px 0px",
   };
   const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     entries.forEach((entry) => {

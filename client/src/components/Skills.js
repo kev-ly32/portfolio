@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, IconButton, Grid, Typography, Paper } from "@material-ui/core";
+import { Grid, Typography, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import background from "../public/Background.jpg";
 
@@ -72,7 +72,6 @@ const useStyles = makeStyles((theme) => ({
   layer: {
     padding: "50px 0",
     backgroundColor: "rgba(0,0,0,0.5)",
-    // height: "100%",
   },
 
   skills: {
@@ -91,20 +90,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-  },
-  logo: {
-    background: "none",
-    transition: "background 50ms ease-in",
-    "&:hover": {
-      background: "rgb(245, 124, 0, 0.09)",
-      borderRadius: "13px",
-    },
-    "&+ .logoName": {
-      display: "none",
-    },
-    "&:hover + .logoName": {
-      display: "block",
-    },
   },
 }));
 
