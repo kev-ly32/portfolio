@@ -5,101 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const projects = [
   {
-    name: "Flow Employee Database",
-    img:
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1613008132/Portfolio/employee-database_tlmo9d.png",
-    description: `Flow is an employee database application that allows users, 
-        perhaps from Human Resources, to update an individual database 
-        containing employee information for a company. This is a full CRUD app 
-        featuring local authentication using Passport.js and search functionality.
-      `,
-    stack: [
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
-        name: "HTML5",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
-        name: "CSS3",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
-        name: "Javascript",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
-        name: "React",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
-        name: "MongoDB",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
-        name: "Node.js",
-      },
-    ],
-    github: "https://github.com/kev-ly32/Flow-Database.git",
-    site: "https://flow-employee-database.herokuapp.com/",
-  },
-  {
-    name: "Aptitude Bank",
-    img:
-      "https://res.cloudinary.com/de5gzocha/image/upload/v1613008132/Portfolio/aptitude-bank_m9khsm.png",
-    description: `Aptitude Bank features full user authentication using Passport.js and 
-      mimics real banking functionality. These features include deposits and
-      withdrawals, as well as money transfers between accounts or to another
-      user. On top of this, transactions are logged to keep track of incoming
-      and outgoing money transfers for each account. Redux is used in this 
-      application to manage the state of account balances and stores it within
-      a mongoDB database.`,
-    stack: [
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
-        name: "HTML5",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
-        name: "CSS3",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
-        name: "Javascript",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
-        name: "React",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/redux_r4cguj.png",
-        name: "Redux",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
-        name: "MongoDB",
-      },
-      {
-        link:
-          "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
-        name: "Node.js",
-      },
-    ],
-    github: "https://github.com/kev-ly32/aptitude-bank.git",
-    site: "https://aptitudebank.herokuapp.com/",
-  },
-  {
     name: "Noted",
     img:
       "https://res.cloudinary.com/de5gzocha/image/upload/v1613008132/Portfolio/noted_wwosxj.png",
@@ -150,6 +55,105 @@ const projects = [
     github: "https://github.com/kev-ly32/noted.git",
     site: "https://have-it-noted.herokuapp.com/",
   },
+
+  {
+    name: "Aptitude Bank",
+    img:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1613008132/Portfolio/aptitude-bank_m9khsm.png",
+    description: `Aptitude Bank features full user authentication using Passport.js and 
+      mimics real banking functionality. These features include deposits and
+      withdrawals, as well as money transfers between accounts or to another
+      user. On top of this, transactions are logged to keep track of incoming
+      and outgoing money transfers for each account. Redux is used in this 
+      application to manage the state of account balances and stores it within
+      a mongoDB database.
+      
+      *Please note, a real SIN # is not required for
+      registration.`,
+    stack: [
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
+        name: "HTML5",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
+        name: "CSS3",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
+        name: "Javascript",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
+        name: "React",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/redux_r4cguj.png",
+        name: "Redux",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
+        name: "MongoDB",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
+        name: "Node.js",
+      },
+    ],
+    github: "https://github.com/kev-ly32/aptitude-bank.git",
+    site: "https://aptitudebank.herokuapp.com/",
+  },
+  {
+    name: "Flow Employee Database",
+    img:
+      "https://res.cloudinary.com/de5gzocha/image/upload/v1613008132/Portfolio/employee-database_tlmo9d.png",
+    description: `Flow is an employee database application that allows users, 
+        perhaps from Human Resources, to update an individual database 
+        containing employee information for a company. This is a full CRUD app 
+        featuring local authentication using Passport.js and search functionality.
+      `,
+    stack: [
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/html_otphxd.png",
+        name: "HTML5",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/css_un8uqf.png",
+        name: "CSS3",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/javascript_cpxt37.png",
+        name: "Javascript",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/react_xdhtjl.png",
+        name: "React",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/mongodb_s43pgt.png",
+        name: "MongoDB",
+      },
+      {
+        link:
+          "https://res.cloudinary.com/de5gzocha/image/upload/v1612922901/Portfolio/nodejs_stx37t.png",
+        name: "Node.js",
+      },
+    ],
+    github: "https://github.com/kev-ly32/Flow-Database.git",
+    site: "https://flow-employee-database.herokuapp.com/",
+  },
 ];
 
 const useStyles = makeStyles({
@@ -161,7 +165,6 @@ const useStyles = makeStyles({
     height: "10%",
     width: "90%",
     paddingLeft: "16px",
-    // textAlign: "center",
   },
   projectsContainer: {
     width: "90%",

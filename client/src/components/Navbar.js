@@ -6,7 +6,6 @@ const useStyles = makeStyles((theme) => ({
   title: {
     width: "20%",
     color: "#f57c00",
-    // textAlign: "center",
     paddingLeft: "20px",
   },
 }));

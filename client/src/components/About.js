@@ -71,7 +71,6 @@ function About({ aboutRef, scroll }) {
           <img
             src="https://res.cloudinary.com/de5gzocha/image/upload/v1613622911/Portfolio/KevinLy_glphuk.jpg"
             alt="Kevin Ly"
-            // style={{ height: "100%", borderRadius: "150px" }}
           />
         </Grid>
         <Grid item xs={12} lg={8}>
