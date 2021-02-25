@@ -75,7 +75,7 @@ function App() {
           contactScroll={scrollToContact}
         />
         <Intro scroll={scrollToAbout} />
-        <About aboutRef={aboutRef} scroll={scrollToSkills} />
+        <About aboutRef={aboutRef} scroll={scrollToProjects} />
         <Skills skillsRef={skillsRef} />
         <Projects projectsRef={projectsRef} />
         <Contact contactRef={contactRef} />

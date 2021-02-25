@@ -146,7 +146,9 @@ const useStyles = makeStyles({
   },
   header: {
     height: "10%",
-    textAlign: "center",
+    width: "90%",
+    paddingLeft: "16px",
+    // textAlign: "center",
   },
   projectsContainer: {
     width: "90%",
@@ -217,9 +219,9 @@ function Projects({ projectsRef }) {
       container
       className={classes.container}
     >
-      <Grid item xs={12} className={`${classes.header} fade-in`}>
-        <Typography gutterBottom variant="h4">
-          Projects!
+      <Grid item className={`${classes.header} fade-in`}>
+        <Typography gutterBottom variant="h3">
+          Projects
         </Typography>
       </Grid>
       <Grid spacing={4} container className={classes.projectsContainer}>

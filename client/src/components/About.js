@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
     height: "200px",
     display: "flex",
   },
+  aboutTextHighlight: {
+    color: "#f57c00",
+    fontWeight: "550",
+  },
   socialMedia: {
     display: "flex",
     alignItems: "center",
@@ -38,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function About({ aboutRef }) {
+function About({ aboutRef, scroll }) {
   const classes = useStyles();
 
   return (
@@ -64,15 +68,26 @@ function About({ aboutRef }) {
           />
         </Grid>
         <Grid item xs={12} lg={8}>
-          <p style={{ marginBottom: "3%" }}>
-            Nice to meet you! My name's Kevin and I'm a web developer with a
+          <p
+            style={{
+              marginBottom: "3%",
+              lineHeight: "1.5",
+              letterSpacing: "0.4px",
+            }}
+          >
+            Nice to meet you! My name is Kevin and I'm a web developer with a
             passion for{" "}
-            <span style={{ color: "#f57c00" }}>full stack development</span>. My
-            goal is to provide a meaningful impact to the projects I work on to
-            create
-            <span style={{ color: "#f57c00" }}> beautiful</span> and
-            <span style={{ color: "#f57c00" }}> functional</span> web
-            applications.
+            <span className={classes.aboutTextHighlight}>
+              full stack development
+            </span>
+            . I currently do quality assurance for a market research company and
+            am now looking for greater challenges to express my creativity and
+            technical skills. As a web developer, my goal is to create
+            <span className={classes.aboutTextHighlight}> beautiful</span> and
+            <span className={classes.aboutTextHighlight}> functional</span> web
+            applications to enhance the{" "}
+            <span className={classes.aboutTextHighlight}> user experience</span>
+            .
           </p>
           <hr style={{ marginBottom: "3%" }} />
           <Grid container>
@@ -105,7 +120,7 @@ function About({ aboutRef }) {
               </Button>
             </Grid>
             <Grid item xs={12} style={{ marginTop: "5%" }}>
-              <Button variant="contained" color="secondary">
+              <Button variant="contained" color="secondary" onClick={scroll}>
                 View Projects
               </Button>
             </Grid>

@@ -11,7 +11,7 @@ const skills = [
       "https://res.cloudinary.com/de5gzocha/image/upload/v1612841339/Portfolio/redux_r4cguj.png",
     ],
     description:
-      "React is my go-to framework for front end development. Together with Redux, this pair provides a clean way to write and maintain code.",
+      "React is a great framework for front end development. Together with Redux, this pair provides a clean way to write and maintain code.",
   },
   {
     title: "Front End Development",

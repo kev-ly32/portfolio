@@ -4,8 +4,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    width: "10%",
-    textAlign: "center",
+    width: "20%",
+    color: "#f57c00",
+    // textAlign: "center",
+    paddingLeft: "20px",
   },
 }));
 
@@ -16,9 +18,9 @@ function Navbar({ aboutScroll, projectsScroll, skillsScroll, contactScroll }) {
     <AppBar position="sticky">
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-          Kevin Ly
+          Kevin
         </Typography>
-        <Grid container justify="flex-end" spacing={3}>
+        <Grid container justify="flex-end" spacing={2}>
           {navLinks.map((link, i) => (
             <Grid
               key={i}
