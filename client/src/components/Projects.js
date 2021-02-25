@@ -5,11 +5,14 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const projects = [
   {
-    name: "Flow Database",
+    name: "Flow Employee Database",
     img:
       "https://res.cloudinary.com/de5gzocha/image/upload/v1613008132/Portfolio/employee-database_tlmo9d.png",
-    description:
-      "Employee database application that allows users to update an individual database to manage employee data for a particular company.",
+    description: `Flow is an employee database application that allows users, 
+        perhaps from Human Resources, to update an individual database 
+        containing employee information for a company. This is a full CRUD app 
+        featuring local authentication using Passport.js and search functionality.
+      `,
     stack: [
       {
         link:
@@ -49,8 +52,13 @@ const projects = [
     name: "Aptitude Bank",
     img:
       "https://res.cloudinary.com/de5gzocha/image/upload/v1613008132/Portfolio/aptitude-bank_m9khsm.png",
-    description:
-      "Banking app featuring full user authentication and real time balance updates. Aptitude Bank also features the ability to send and receive money to other users and updates account transaction history for all balance updates.",
+    description: `Aptitude Bank features full user authentication using Passport.js and 
+      mimics real banking functionality. These features include deposits and
+      withdrawals, as well as money transfers between accounts or to another
+      user. On top of this, transactions are logged to keep track of incoming
+      and outgoing money transfers for each account. Redux is used in this 
+      application to manage the state of account balances and stores it within
+      a mongoDB database.`,
     stack: [
       {
         link:
@@ -95,8 +103,13 @@ const projects = [
     name: "Noted",
     img:
       "https://res.cloudinary.com/de5gzocha/image/upload/v1613008132/Portfolio/noted_wwosxj.png",
-    description:
-      "Personalized note taking app with full user authentication. App features the ability to not only add, update, and remove notes, but also allows users to move each note within the dashboard whereever they please, organizing them in a way that suits their needs. Note position is updated in real time and saves to a Postgresql database.",
+    description: `Noted is a personalized note taking app featuring full user 
+      authentication using Passport.js and utilizes Material-UI as the front 
+      end framework for an enhanced experience. This App features CRUD 
+      capabilities and allows users to position each note by dragging them 
+      within the dashboard wherever they please, organizing them in a way 
+      that suits their needs. Note position is persisted when users log out by 
+      saving their relative coordinates to a PostgreSQL database.`,
     stack: [
       {
         link:
@@ -142,7 +155,7 @@ const projects = [
 const useStyles = makeStyles({
   container: {
     backgroundColor: "#F5F5F5",
-    padding: "5% 0",
+    padding: "7% 0",
   },
   header: {
     height: "10%",
@@ -177,6 +190,11 @@ const useStyles = makeStyles({
   },
   description: {
     paddingLeft: "5%",
+  },
+  projectDescription: {
+    marginBottom: "3%",
+    lineHeight: "1.4",
+    letterSpacing: "0.4px",
   },
   logo: {
     background: "none",
@@ -285,9 +303,12 @@ function Projects({ projectsRef }) {
                 <Typography color="secondary" variant="h6">
                   Description:
                 </Typography>
-                <p> {project.description}</p>
+                <p className={classes.projectDescription}>
+                  {" "}
+                  {project.description}
+                </p>
                 <Typography color="secondary" variant="h6">
-                  Tech stack:
+                  Built With:
                 </Typography>
                 <Grid container>
                   {project.stack.map((logo, i) => (

@@ -6,17 +6,24 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: "80%",
+    minHeight: "80%",
     alignItems: "center",
     backgroundColor: "#F5F5F5",
   },
   aboutContainer: {
     width: "60%",
+    padding: "10% 0",
   },
 
   aboutImage: {
     height: "200px",
     display: "flex",
+    marginBottom: "30px",
+  },
+  aboutText: {
+    marginBottom: "3%",
+    lineHeight: "1.5",
+    letterSpacing: "0.4px",
   },
   aboutTextHighlight: {
     color: "#f57c00",
@@ -68,13 +75,7 @@ function About({ aboutRef, scroll }) {
           />
         </Grid>
         <Grid item xs={12} lg={8}>
-          <p
-            style={{
-              marginBottom: "3%",
-              lineHeight: "1.5",
-              letterSpacing: "0.4px",
-            }}
-          >
+          <p className={classes.aboutText}>
             Nice to meet you! My name is Kevin and I'm a web developer with a
             passion for{" "}
             <span className={classes.aboutTextHighlight}>
@@ -104,7 +105,7 @@ function About({ aboutRef, scroll }) {
                 variant="contained"
                 href="https://www.linkedin.com/in/kevin-ly-b7720b13a/"
                 target="_blank"
-                style={{ margin: "0 15px 15px 0" }}
+                style={{ margin: "15px 15px 15px 0" }}
               >
                 <span style={{ paddingRight: "10px" }}>LinkedIn</span>
                 <LinkedInIcon style={{ fontSize: 20 }} />
@@ -113,7 +114,7 @@ function About({ aboutRef, scroll }) {
                 variant="contained"
                 href="https://github.com/kev-ly32"
                 target="_blank"
-                style={{ margin: "0 0 15px 0" }}
+                style={{ margin: "15px 0" }}
               >
                 <span style={{ paddingRight: "10px" }}>GitHub</span>
                 <GitHubIcon style={{ fontSize: 20 }} />
