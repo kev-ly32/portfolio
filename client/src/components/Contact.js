@@ -6,7 +6,6 @@ import background from "../public/Background.jpg";
 
 const useStyles = makeStyles({
   container: {
-    height: "80%",
     backgroundImage: `url(${background})`,
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
@@ -15,6 +14,7 @@ const useStyles = makeStyles({
   layer: {
     backgroundColor: "rgba(0,0,0,0.5)",
     height: "100%",
+    padding: "8% 0",
   },
   form: {
     width: "100%",

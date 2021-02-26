@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    paddingTop: "150px",
+    height: "400px",
+    paddingTop: "15%",
   },
   layer: {
     backgroundColor: "rgba(0,0,0,0.5)",
@@ -50,8 +51,8 @@ function Intro({ scroll }) {
   return (
     <div className={classes.sectionContainer}>
       <div className={classes.layer}>
-        <Grid container direction="column" className={classes.container}>
-          <Grid item xs={9} className={classes.containerText}>
+        <Grid container className={classes.container}>
+          <Grid item xs={12} className={classes.containerText}>
             <Typography
               gutterBottom
               className={`${classes.color} fade-in`}

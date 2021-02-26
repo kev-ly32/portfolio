@@ -63,7 +63,7 @@ const skills = [
 const useStyles = makeStyles((theme) => ({
   sectionContainer: {
     minHeight: " 100%",
-    maxHeight: "300%",
+    // maxHeight: "300%",
     backgroundImage: `url(${background})`,
     backgroundSize: "cover",
     backgroundAttachment: "fixed",

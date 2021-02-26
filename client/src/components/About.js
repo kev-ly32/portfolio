@@ -6,7 +6,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    minHeight: "80%",
+    minHeight: "70%",
     alignItems: "center",
     backgroundColor: "#F5F5F5",
   },
