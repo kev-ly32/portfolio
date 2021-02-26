@@ -306,10 +306,13 @@ function Projects({ projectsRef }) {
                 <Typography color="secondary" variant="h6">
                   Description:
                 </Typography>
-                <p className={classes.projectDescription}>
+                <Typography
+                  variant="body1"
+                  className={classes.projectDescription}
+                >
                   {" "}
                   {project.description}
-                </p>
+                </Typography>
                 <Typography color="secondary" variant="h6">
                   Built With:
                 </Typography>

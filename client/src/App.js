@@ -6,10 +6,10 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui//styles";
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   palette: {
     primary: {
       main: "#424242",
@@ -23,6 +23,8 @@ const theme = createMuiTheme({
     fontFamily: ["Libre Franklin"],
   },
 });
+
+theme = responsiveFontSizes(theme);
 
 function App() {
   const [faders, setFaders] = useState([]);

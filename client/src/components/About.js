@@ -74,7 +74,7 @@ function About({ aboutRef, scroll }) {
           />
         </Grid>
         <Grid item xs={12} lg={8}>
-          <p className={classes.aboutText}>
+          <Typography variant="body1" className={classes.aboutText}>
             Nice to meet you! My name is Kevin and I'm a web developer with a
             passion for{" "}
             <span className={classes.aboutTextHighlight}>
@@ -88,7 +88,7 @@ function About({ aboutRef, scroll }) {
             applications to enhance the{" "}
             <span className={classes.aboutTextHighlight}> user experience</span>
             .
-          </p>
+          </Typography>
           <hr style={{ marginBottom: "3%" }} />
           <Grid container>
             <Grid item xs={12} sm={6}>
