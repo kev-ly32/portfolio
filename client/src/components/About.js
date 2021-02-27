@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutContainer: {
     width: "60%",
-    padding: "10% 0",
+    padding: "100px 0",
   },
 
   aboutImage: {

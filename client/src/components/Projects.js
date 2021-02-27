@@ -159,7 +159,7 @@ const projects = [
 const useStyles = makeStyles({
   container: {
     backgroundColor: "#F5F5F5",
-    padding: "7% 0",
+    padding: "80px 0",
   },
   header: {
     height: "10%",

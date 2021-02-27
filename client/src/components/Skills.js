@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
   },
   layer: {
-    padding: "50px 0",
+    padding: "100px 0",
     backgroundColor: "rgba(0,0,0,0.5)",
   },
 

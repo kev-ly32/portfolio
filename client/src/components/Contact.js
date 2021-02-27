@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   layer: {
     backgroundColor: "rgba(0,0,0,0.5)",
     height: "100%",
-    padding: "8% 0",
+    padding: "80px 0",
   },
   form: {
     width: "100%",
