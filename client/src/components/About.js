@@ -80,8 +80,8 @@ function About({ aboutRef, scroll }) {
             <span className={classes.aboutTextHighlight}>
               full stack development
             </span>
-            . I currently do quality assurance for a market research company and
-            am now looking for greater challenges to express my creativity and
+            . I am a full stack developer with a focus on the front-end and am
+            always looking for greater challenges to express my creativity and
             technical skills. As a web developer, my goal is to create
             <span className={classes.aboutTextHighlight}> beautiful</span> and
             <span className={classes.aboutTextHighlight}> functional</span> web
